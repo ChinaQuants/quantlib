@@ -2400,6 +2400,9 @@
     <ClInclude Include="ql\pricingengines\vanilla\analyticeuropeanengine.hpp">
       <Filter>pricingengines\vanilla</Filter>
     </ClInclude>
+    <ClInclude Include="ql\pricingengines\vanilla\analyticeuropeanvasicekengine.hpp">
+      <Filter>pricingengines\vanilla</Filter>
+    </ClInclude>
     <ClInclude Include="ql\pricingengines\vanilla\analyticgjrgarchengine.hpp">
       <Filter>pricingengines\vanilla</Filter>
     </ClInclude>
@@ -2563,6 +2566,9 @@
       <Filter>pricingengines\lookback</Filter>
     </ClInclude>
     <ClInclude Include="ql\pricingengines\lookback\analyticcontinuouspartialfloatinglookback.hpp">
+      <Filter>pricingengines\lookback</Filter>
+    </ClInclude>
+    <ClInclude Include="ql\pricingengines\lookback\mclookbackengine.hpp">
       <Filter>pricingengines\lookback</Filter>
     </ClInclude>
     <ClInclude Include="ql\pricingengines\bond\all.hpp">
@@ -3543,6 +3549,9 @@
     <ClInclude Include="ql\experimental\barrieroption\analyticdoublebarrierengine.hpp">
       <Filter>experimental\barrieroption</Filter>
     </ClInclude>
+    <ClInclude Include="ql\experimental\barrieroption\mcdoublebarrierengine.hpp">
+      <Filter>experimental\barrieroption</Filter>
+    </ClInclude>
     <ClInclude Include="ql\experimental\barrieroption\binomialdoublebarrierengine.hpp">
       <Filter>experimental\barrieroption</Filter>
     </ClInclude>
@@ -4293,6 +4302,15 @@
     </ClInclude>
     <ClInclude Include="ql\methods\finitedifferences\schemes\cranknicolsonscheme.hpp">
       <Filter>methods\finitedifferences\schemes</Filter>
+    </ClInclude>
+    <ClInclude Include="ql\math\integrals\gausslaguerrecosinepolynomial.hpp">
+      <Filter>math\integrals</Filter>
+    </ClInclude>
+    <ClInclude Include="ql\math\integrals\momentbasedgaussianpolynomial.hpp">
+      <Filter>math\integrals</Filter>
+    </ClInclude>
+    <ClInclude Include="ql\pricingengines\vanilla\exponentialfittinghestonengine.hpp">
+      <Filter>pricingengines\vanilla</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -5535,6 +5553,9 @@
     <ClCompile Include="ql\pricingengines\vanilla\analyticeuropeanengine.cpp">
       <Filter>pricingengines\vanilla</Filter>
     </ClCompile>
+    <ClCompile Include="ql\pricingengines\vanilla\analyticeuropeanvasicekengine.cpp">
+      <Filter>pricingengines\vanilla</Filter>
+    </ClCompile>
     <ClCompile Include="ql\pricingengines\vanilla\analyticgjrgarchengine.cpp">
       <Filter>pricingengines\vanilla</Filter>
     </ClCompile>
@@ -5635,6 +5656,9 @@
       <Filter>pricingengines\lookback</Filter>
     </ClCompile>
     <ClCompile Include="ql\pricingengines\lookback\analyticcontinuouspartialfloatinglookback.cpp">
+      <Filter>pricingengines\lookback</Filter>
+    </ClCompile>
+    <ClCompile Include="ql\pricingengines\lookback\mclookbackengine.cpp">
       <Filter>pricingengines\lookback</Filter>
     </ClCompile>
     <ClCompile Include="ql\pricingengines\bond\bondfunctions.cpp">
@@ -6390,6 +6414,9 @@
     <ClCompile Include="ql\experimental\barrieroption\analyticdoublebarrierengine.cpp">
       <Filter>experimental\barrieroption</Filter>
     </ClCompile>
+    <ClCompile Include="ql\experimental\barrieroption\mcdoublebarrierengine.cpp">
+      <Filter>experimental\barrieroption</Filter>
+    </ClCompile>
     <ClCompile Include="ql\experimental\barrieroption\discretizeddoublebarrieroption.cpp">
       <Filter>experimental\barrieroption</Filter>
     </ClCompile>
@@ -6929,6 +6956,9 @@
     </ClCompile>
     <ClCompile Include="ql\methods\finitedifferences\schemes\cranknicolsonscheme.cpp">
       <Filter>methods\finitedifferences\schemes</Filter>
+    </ClCompile>
+    <ClCompile Include="ql\pricingengines\vanilla\exponentialfittinghestonengine.cpp">
+      <Filter>pricingengines\vanilla</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

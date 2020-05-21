@@ -53,6 +53,7 @@ set(QuantLib_SRC
     experimental/averageois/makearithmeticaverageois.cpp
     experimental/barrieroption/analyticdoublebarrierbinaryengine.cpp
     experimental/barrieroption/analyticdoublebarrierengine.cpp
+    experimental/barrieroption/mcdoublebarrierengine.cpp
     experimental/barrieroption/discretizeddoublebarrieroption.cpp
     experimental/barrieroption/doublebarrieroption.cpp
     experimental/barrieroption/doublebarriertype.cpp
@@ -686,6 +687,7 @@ set(QuantLib_SRC
     pricingengines/lookback/analyticcontinuousfloatinglookback.cpp
     pricingengines/lookback/analyticcontinuouspartialfixedlookback.cpp
     pricingengines/lookback/analyticcontinuouspartialfloatinglookback.cpp
+    pricingengines/lookback/mclookbackengine.cpp
     pricingengines/swap/cvaswapengine.cpp
     pricingengines/swap/discountingswapengine.cpp
     pricingengines/swap/discretizedswap.cpp
@@ -706,6 +708,7 @@ set(QuantLib_SRC
     pricingengines/vanilla/analyticdigitalamericanengine.cpp
     pricingengines/vanilla/analyticdividendeuropeanengine.cpp
     pricingengines/vanilla/analyticeuropeanengine.cpp
+    pricingengines/vanilla/analyticeuropeanvasicekengine.cpp
     pricingengines/vanilla/analyticgjrgarchengine.cpp
     pricingengines/vanilla/analytich1hwengine.cpp
     pricingengines/vanilla/analytichestonengine.cpp
@@ -716,6 +719,7 @@ set(QuantLib_SRC
     pricingengines/vanilla/bjerksundstenslandengine.cpp
     pricingengines/vanilla/coshestonengine.cpp
     pricingengines/vanilla/discretizedvanillaoption.cpp
+    pricingengines/vanilla/exponentialfittinghestonengine.cpp
     pricingengines/vanilla/fdbatesvanillaengine.cpp
     pricingengines/vanilla/fdblackscholesvanillaengine.cpp
     pricingengines/vanilla/fdcevvanillaengine.cpp
@@ -964,6 +968,7 @@ set(QuantLib_HDR
     experimental/barrieroption/all.hpp
     experimental/barrieroption/analyticdoublebarrierbinaryengine.hpp
     experimental/barrieroption/analyticdoublebarrierengine.hpp
+    experimental/barrieroption/mcdoublebarrierengine.hpp
     experimental/barrieroption/binomialdoublebarrierengine.hpp
     experimental/barrieroption/discretizeddoublebarrieroption.hpp
     experimental/barrieroption/doublebarrieroption.hpp
@@ -1432,9 +1437,11 @@ set(QuantLib_HDR
     math/integrals/filonintegral.hpp
     math/integrals/gaussianorthogonalpolynomial.hpp
     math/integrals/gaussianquadratures.hpp
+    math/integrals/gausslaguerrecosinepolynomial.hpp
     math/integrals/gausslobattointegral.hpp
     math/integrals/integral.hpp
     math/integrals/kronrodintegral.hpp
+    math/integrals/momentbasedgaussianpolynomial.hpp
     math/integrals/segmentintegral.hpp
     math/integrals/simpsonintegral.hpp
     math/integrals/trapezoidintegral.hpp
@@ -1935,6 +1942,7 @@ set(QuantLib_HDR
     pricingengines/lookback/analyticcontinuousfloatinglookback.hpp
     pricingengines/lookback/analyticcontinuouspartialfixedlookback.hpp
     pricingengines/lookback/analyticcontinuouspartialfloatinglookback.hpp
+    pricingengines/lookback/mclookbackengine.hpp
     pricingengines/mclongstaffschwartzengine.hpp
     pricingengines/mcsimulation.hpp
     pricingengines/quanto/all.hpp
@@ -1963,6 +1971,7 @@ set(QuantLib_HDR
     pricingengines/vanilla/analyticdigitalamericanengine.hpp
     pricingengines/vanilla/analyticdividendeuropeanengine.hpp
     pricingengines/vanilla/analyticeuropeanengine.hpp
+    pricingengines/vanilla/analyticeuropeanvasicekengine.hpp
     pricingengines/vanilla/analyticgjrgarchengine.hpp
     pricingengines/vanilla/analytich1hwengine.hpp
     pricingengines/vanilla/analytichestonengine.hpp
@@ -1974,6 +1983,7 @@ set(QuantLib_HDR
     pricingengines/vanilla/bjerksundstenslandengine.hpp
     pricingengines/vanilla/coshestonengine.hpp
     pricingengines/vanilla/discretizedvanillaoption.hpp
+    pricingengines/vanilla/exponentialfittinghestonengine.hpp
     pricingengines/vanilla/fdamericanengine.hpp
     pricingengines/vanilla/fdbatesvanillaengine.hpp
     pricingengines/vanilla/fdbermudanengine.hpp

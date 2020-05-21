@@ -5,6 +5,7 @@
 #include <ql/pricingengines/vanilla/analyticdigitalamericanengine.hpp>
 #include <ql/pricingengines/vanilla/analyticdividendeuropeanengine.hpp>
 #include <ql/pricingengines/vanilla/analyticeuropeanengine.hpp>
+#include <ql/pricingengines/vanilla/analyticeuropeanvasicekengine.hpp>
 #include <ql/pricingengines/vanilla/analyticcevengine.hpp>
 #include <ql/pricingengines/vanilla/analyticgjrgarchengine.hpp>
 #include <ql/pricingengines/vanilla/analytich1hwengine.hpp>
@@ -17,6 +18,7 @@
 #include <ql/pricingengines/vanilla/bjerksundstenslandengine.hpp>
 #include <ql/pricingengines/vanilla/coshestonengine.hpp>
 #include <ql/pricingengines/vanilla/discretizedvanillaoption.hpp>
+#include <ql/pricingengines/vanilla/exponentialfittinghestonengine.hpp>
 #include <ql/pricingengines/vanilla/hestonexpansionengine.hpp>
 #include <ql/pricingengines/vanilla/integralengine.hpp>
 #include <ql/pricingengines/vanilla/jumpdiffusionengine.hpp>
