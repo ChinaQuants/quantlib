@@ -387,22 +387,6 @@ if (QL_BUILD_TEST_SUITE)
     add_test(NAME test_suite COMMAND ql_test_suite --log_level=message)
 endif()
 
-<<<<<<< HEAD
-find_package (Boost REQUIRED COMPONENTS unit_test_framework)
-
-set (TEST quantlib-test-suite)
-add_executable (${TEST} ${QuantLib-Test_SRC} ${QuantLib-Test_HDR})
-target_link_libraries (${TEST} ${QL_LINK_LIBRARY} ${Boost_LIBRARIES})
-set_property(TARGET ${TEST} PROPERTY PROJECT_LABEL "testsuite")
-
-install(TARGETS ${TEST}
-        RUNTIME DESTINATION bin
-        PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
-        )
-
-add_test (${TEST} ${TEST})
-
-=======
 IF (QL_BUILD_BENCHMARK)
     add_executable(ql_benchmark ${QL_BENCHMARK_SOURCES})
     set_target_properties(ql_benchmark PROPERTIES OUTPUT_NAME "quantlib-benchmark")
@@ -421,4 +405,3 @@ IF (QL_BUILD_BENCHMARK)
         install(TARGETS ql_benchmark RUNTIME DESTINATION ${QL_INSTALL_BINDIR})
     endif()
 endif()
->>>>>>> 962f4f7574428e2b85d9eceed21733a162458277
