@@ -61,8 +61,8 @@ set(QL_SOURCES
     experimental/barrieroption/doublebarriertype.cpp
     experimental/barrieroption/perturbativebarrieroptionengine.cpp
     experimental/barrieroption/quantodoublebarrieroption.cpp
+    experimental/barrieroption/suowangdoublebarrierengine.cpp
     experimental/barrieroption/vannavolgabarrierengine.cpp
-    experimental/barrieroption/wulinyongdoublebarrierengine.cpp
     experimental/basismodels/swaptioncfs.cpp
     experimental/basismodels/tenoroptionletvts.cpp
     experimental/basismodels/tenorswaptionvts.cpp
@@ -223,6 +223,7 @@ set(QL_SOURCES
     experimental/swaptions/haganirregularswaptionengine.cpp
     experimental/swaptions/irregularswap.cpp
     experimental/swaptions/irregularswaption.cpp
+    experimental/termstructures/basisswapratehelpers.cpp
     experimental/termstructures/crosscurrencyratehelpers.cpp
     experimental/variancegamma/analyticvariancegammaengine.cpp
     experimental/variancegamma/fftengine.cpp
@@ -991,10 +992,10 @@ set(QL_HEADERS
     experimental/barrieroption/doublebarriertype.hpp
     experimental/barrieroption/perturbativebarrieroptionengine.hpp
     experimental/barrieroption/quantodoublebarrieroption.hpp
+    experimental/barrieroption/suowangdoublebarrierengine.hpp
     experimental/barrieroption/vannavolgabarrierengine.hpp
     experimental/barrieroption/vannavolgadoublebarrierengine.hpp
     experimental/barrieroption/vannavolgainterpolation.hpp
-    experimental/barrieroption/wulinyongdoublebarrierengine.hpp
     experimental/basismodels/swaptioncfs.hpp
     experimental/basismodels/tenoroptionletvts.hpp
     experimental/basismodels/tenorswaptionvts.hpp
@@ -1205,6 +1206,7 @@ set(QL_HEADERS
     experimental/swaptions/haganirregularswaptionengine.hpp
     experimental/swaptions/irregularswap.hpp
     experimental/swaptions/irregularswaption.hpp
+    experimental/termstructures/basisswapratehelpers.hpp
     experimental/termstructures/crosscurrencyratehelpers.hpp
     experimental/termstructures/multicurvesensitivities.hpp
     experimental/variancegamma/analyticvariancegammaengine.hpp
@@ -1835,7 +1837,6 @@ set(QL_HEADERS
     pricingengines/asian/mc_discr_arith_av_strike.hpp
     pricingengines/asian/mc_discr_geom_av_price.hpp
     pricingengines/asian/mc_discr_geom_av_price_heston.hpp
-    pricingengines/asian/mcdiscreteasianengine.hpp
     pricingengines/asian/mcdiscreteasianenginebase.hpp
     pricingengines/barrier/analyticbarrierengine.hpp
     pricingengines/barrier/analyticbinarybarrierengine.hpp
