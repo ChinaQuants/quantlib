@@ -155,11 +155,10 @@ namespace QuantLib {
         return coupon_->gearing() * rate + coupon_->spread();
     }
 
-    SubPeriodsLeg::SubPeriodsLeg(const Schedule &schedule, ext::shared_ptr<IborIndex> i)
-    : schedule_(schedule), index_(std::move(i)), paymentCalendar_(schedule.calendar()),
-      paymentAdjustment_(Following), paymentLag_(0), averagingMethod_(RateAveraging::Compound), 
-      exCouponPeriod_(Period()), exCouponCalendar_(Calendar()), 
-      exCouponAdjustment_(Unadjusted), exCouponEndOfMonth_(false) {}
+    SubPeriodsLeg::SubPeriodsLeg(const Schedule& schedule, ext::shared_ptr<IborIndex> i)
+    : schedule_(schedule), index_(std::move(i)), paymentCalendar_(schedule.calendar()) {
+        QL_REQUIRE(index_, "no index provided");
+    }
 
     SubPeriodsLeg& SubPeriodsLeg::withNotionals(Real notional) {
         notionals_ = std::vector<Real>(1, notional);
