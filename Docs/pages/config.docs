@@ -22,6 +22,8 @@
     or undefining such macros triggers variations in some library
     functionality.
 
+    When using CMake, they can be set to `ON` or `OFF` as properties.
+
     Under a Linux/Unix system, they are (un)set by `configure`;
     run
     \code
@@ -85,14 +87,6 @@
     or any environment with an async garbage collector.  Undefined by
     default.  If defined together with `QL_USE_STD_SHARED_PTR`, it requires
     at least C++17.
-
-    \code
-    #define QL_ENABLE_SINGLETON_THREAD_SAFE_INIT
-    \endcode
-    Define this to make `Singleton` initialization thread-safe.
-    Undefined by default.  Not compatible with `QL_ENABLE_THREAD_SAFE_OBSERVER_PATTERN`.
-    Note that defining QL_ENABLE_SESSIONS implies thread-safe initialization,
-    whether this is defined or not.
 
     \code
     #define QL_HIGH_RESOLUTION_DATE

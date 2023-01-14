@@ -83,7 +83,6 @@ QL_TEST_SRCS = \
 	inflationcpicapfloor.cpp \
 	inflationcpiswap.cpp \
 	inflationvolatility.cpp \
-	inflationzciisinterpolation.cpp \
 	instruments.cpp \
 	integrals.cpp \
 	interestrates.cpp \
@@ -251,7 +250,6 @@ QL_TEST_HDRS = \
 	inflationcpicapfloor.hpp \
 	inflationcpiswap.hpp \
 	inflationvolatility.hpp \
-	inflationzciisinterpolation.hpp \
 	instruments.hpp \
 	integrals.hpp \
 	interestrates.hpp \
@@ -392,7 +390,7 @@ dist-hook:
 	mkdir -p $(distdir)/bin
 	cp -p $(srcdir)/bin/runtest.bat $(distdir)/bin
 
-if BOOST_UNIT_TEST_FOUND
+if BUILD_TEST_SUITE
 
 AM_CPPFLAGS = -I${top_builddir} -I${top_srcdir}
 

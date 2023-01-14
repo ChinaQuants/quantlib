@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT([QuantLib], [1.28-dev],
+AC_INIT([QuantLib], [1.29-rc],
         [quantlib-dev@lists.sourceforge.net],
         [QuantLib])
 AC_PREREQ(2.62)
@@ -72,7 +72,6 @@ QL_CHECK_SYSTEM_HEADER_PREFIX
 
 # Check for Boost components
 QL_CHECK_BOOST
-AM_CONDITIONAL(BOOST_UNIT_TEST_FOUND, test "x${HAVE_BOOST_TEST}" != "x")
 
 # Check for Emacs
 AM_PATH_LISPDIR
@@ -248,23 +247,7 @@ if test "$ql_use_tsop" = "yes" ; then
               thread-safe observer pattern.])
 fi
 
-AC_MSG_CHECKING([whether to enable thread-safe singleton initialization])
-AC_ARG_ENABLE([thread-safe-singleton-init],
-              AS_HELP_STRING([--enable-thread-safe-singleton-init],
-                             [If enabled, singleton initialization will
-                              be thread-safe. This requires Boost 1.58
-                              or later.  Note that --enable-sessions
-                              implies thread-safe initialization,
-                              whether this is defined or not]),
-              [ql_use_safe_singleton_init=$enableval],
-              [ql_use_safe_singleton_init=no])
-if test "$ql_use_safe_singleton_init" = "yes" ; then
-   AC_DEFINE([QL_ENABLE_SINGLETON_THREAD_SAFE_INIT],[1],
-             [Define this if you want thread-safe singleton initialization.])
-fi
-AC_MSG_RESULT([$ql_use_safe_singleton_init])
-
-if test "$ql_use_sessions" = "yes" || test "$ql_use_tsop" = "yes" || test "$ql_use_safe_singleton_init" = "yes"; then
+if test "$ql_use_sessions" = "yes" || test "$ql_use_tsop" = "yes"; then
    QL_CHECK_BOOST_VERSION_1_58_OR_HIGHER
    QL_CHECK_BOOST_SIGNALS2
 else
@@ -433,6 +416,17 @@ if test "$ql_use_null_functions" = "yes" ; then
              [Define this if you want to enable the implementation of Null as template functions.])
 fi
 AC_MSG_RESULT([$ql_use_null_functions])
+
+AC_MSG_CHECKING([whether to compile the test suite])
+AC_ARG_ENABLE([test-suite],
+              AS_HELP_STRING([--enable-test-suite],
+                             [If enabled (the default), the test suite is
+                              also built, assuming Boost.Test could be found.
+                              If disabled, it is not. Do not try this at home.]),
+              [ql_build_test_suite=$enableval],
+              [ql_build_test_suite=yes])
+AM_CONDITIONAL(BUILD_TEST_SUITE, test "$ql_build_test_suite" != "no" && test "x${HAVE_BOOST_TEST}" != "x" )
+AC_MSG_RESULT([$ql_build_test_suite])
 
 
 # manual configurations for specific hosts
